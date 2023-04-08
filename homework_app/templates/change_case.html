@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Case</title>
+</head>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+    <input name="input_string" placeholder="Введите предложение">
+    <input type="submit" value="Подтвердить">
+</form>
+
+<label>{{ result }}</label>
+
+</body>
+</html>
