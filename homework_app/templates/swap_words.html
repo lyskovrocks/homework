@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swap Words</title>
+</head>
+<style>
+    textarea {
+        width: 500px;
+        heigh: 150px;
+    }
+</style>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+    <input name="input_string" placeholder="Введите предложение" size="60"/><br>
+    <input name="find_word" placeholder="Введите искомое слово"/><br>
+    <input name="replace_to" placeholder="Заменить на"/><br>
+    <input type="submit" value="Подтвердить"/><br>
+</form>
+
+<br><label>{{ result }}</label>
+
+</body>
+</html>

@@ -62,3 +62,13 @@ def toggle_case(request):
         result = '-'
     print(result)
     return render(request, 'change_case.html', {'result': result})
+
+def swap_words(request):
+    if request.method == 'POST':
+        request_data_dict = dict(request.POST.items())
+        result = request_data_dict['input_string'].replace(request_data_dict['find_word'], request_data_dict['replace_to'])
+        print(request_data_dict)
+    else:
+        result = '-'
+    print(result)
+    return render(request, 'swap_words.html', {'result': result})
